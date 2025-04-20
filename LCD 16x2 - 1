@@ -39,7 +39,7 @@ void displayLCD(const LCD16x2 *lcd) {
 int main() {
     // Khoi tao mot bien kieu LCD16x2
     LCD16x2 myLCD;
-    myLCD.data_set = false; // Ban dau chua có du lieu
+    myLCD.data_set = false; // Ban dau chua cÃ³ du lieu
 
     // Thiet lap du lieu
     setLCDData(&myLCD, "Hello, World!", "Second Line");
@@ -53,7 +53,7 @@ int main() {
     // Hien thi loi
     displayLCD(&myLCD);
 
-    // Hien thi khi chua có du lieu (tao mot bien LCD moi)
+    // Hien thi khi chua cÃ³ du lieu (tao mot bien LCD moi)
     LCD16x2 emptyLCD;
     displayLCD(&emptyLCD);
 
