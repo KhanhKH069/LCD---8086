@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdbool.h>
 
-// –inh nghia kieu du lieu ban ghi cho man hinh LCD 16x2
+// √êinh nghia kieu du lieu ban ghi cho man hinh LCD 16x2
 typedef struct {
     char text[2][16]; // Noi dung: 2 dong, moi dong 16 ky tu
     bool is_initialized; // Trang thai khoi tao
@@ -14,7 +14,7 @@ typedef struct {
 void lcd_set_data(LCD_16x2 *lcd, int row, int col, const char *data) {
     // Kiem tra con tro hop li
     if (lcd == NULL) {
-        printf("Loi: Con tro LCD khÙng hop li\n");
+        printf("Loi: Con tro LCD kh√¥ng hop li\n");
         return;
     }
 
@@ -24,9 +24,9 @@ void lcd_set_data(LCD_16x2 *lcd, int row, int col, const char *data) {
         return;
     }
 
-    // Kiem tra vi tri dong v‡ cot
+    // Kiem tra vi tri dong v√† cot
     if (row < 0 || row > 1 || col < 0 || col > 15) {
-        printf("Loi: Vi tri dong (%d) hoac cot (%d) khÙng hop li\n", row, col);
+        printf("Loi: Vi tri dong (%d) hoac cot (%d) kh√¥ng hop li\n", row, col);
         return;
     }
 
@@ -50,7 +50,7 @@ void lcd_set_data(LCD_16x2 *lcd, int row, int col, const char *data) {
 void lcd_display(LCD_16x2 *lcd) {
     // Kiem tra con tro hop li
     if (lcd == NULL) {
-        printf("Loi: Con tro LCD khÙng hop li\n");
+        printf("Loi: Con tro LCD kh√¥ng hop li\n");
         return;
     }
 
@@ -60,7 +60,7 @@ void lcd_display(LCD_16x2 *lcd) {
         return;
     }
 
-    // Hien thi noi dung (mo phong trÍn console)
+    // Hien thi noi dung (mo phong tr√™n console)
     printf("\n=== Noi dung man hinh LCD 16x2 ===\n");
     for (int i = 0; i < 2; i++) {
         printf("Dong %d: [%-16s]\n", i, lcd->text[i]);
